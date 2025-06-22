@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="assets/img/finder.png" alt="Logo do App" class="logo">
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <!-- Adicionado (click) como alternativa à navegação -->
+      <ion-button (click)="goToProfile()" color="secondary" aria-label="Meu Perfil">
+        Meu Perfil
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Barra de Pesquisa -->
+  <ion-searchbar class="search-bar" [(ngModel)]="query" (ionInput)="search()" placeholder="Busque por filmes ou séries">
+  </ion-searchbar>
+
+  <!-- Seção de Gêneros -->
+  <ion-list-header>
+    <h2 class="genre-header">Filtrar por Gênero</h2>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>Selecione um gênero</ion-label>
+    <ion-select [(ngModel)]="selectedGenre" (ionChange)="filterByGenre($event)">
+      <ion-select-option value="all">Todos</ion-select-option>
+      <ion-select-option *ngFor="let genre of genres" [value]="genre.id">
+        {{ genre.name }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Lista de Filmes Populares -->
+  <ion-list>
+    <ion-list-header>
+      <h2>Filmes Populares</h2>
+    </ion-list-header>
+    <ion-card *ngFor="let movie of filteredResults" [routerLink]="['/movie', movie.id]">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Pôster de {{ movie.title }}"
+        loading="lazy">
+      <ion-card-header>
+        <ion-card-title>{{ movie.title }}</ion-card-title>
+        <ion-card-subtitle>{{ movie.release_date | date: 'dd/MM/yyyy' }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ movie.overview | slice: 0:100 }}...</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <!-- Lista de Séries Populares -->
+  <ion-list *ngIf="filteredSeries.length > 0">
+    <ion-list-header>
+      <h2>Séries Populares</h2>
+    </ion-list-header>
+    <ion-card *ngFor="let series of filteredSeries" (click)="navigateToSeriesDetails(series.id)">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + series.poster_path" alt="Pôster de {{ series.name }}"
+        loading="lazy">
+      <ion-card-header>
+        <ion-card-title>{{ series.name }}</ion-card-title>
+        <ion-card-subtitle>{{ series.first_air_date | date: 'dd/MM/yyyy' }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ series.overview | slice: 0:100 }}...</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

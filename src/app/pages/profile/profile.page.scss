@@ -1,0 +1,107 @@
+/* Estilos personalizados */
+
+.user-info {
+    background-color: #2e2e2e;
+    color: white;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+    ion-item {
+        --background: transparent;
+    }
+
+    .user-details {
+        h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #b22222;
+        }
+
+        p {
+            margin: 0;
+            color: #ccc;
+            font-size: 14px;
+        }
+    }
+}
+
+ion-list {
+    margin: 10px;
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    color: white;
+
+    ion-list-header {
+        background-color: #b22222;
+        color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding: 10px 15px;
+    }
+
+    ion-item {
+        --background: #2e2e2e;
+        --color: #ffffff;
+        margin: 0;
+        border-radius: 4px;
+        padding: 10px;
+
+        &:hover {
+            --background: #3a3a3a;
+        }
+    }
+
+    /* Estilo adicional para os itens de avaliação */
+    ion-item ion-label h3 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    ion-item ion-label p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+}
+
+ion-avatar img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+ion-icon {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+/* Botões de Ação */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+ion-button {
+    --border-radius: 5px;
+    margin-bottom: 10px;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+ion-button[color="secondary"] {
+    --background: #b22222;
+    --color: white;
+}
+
+ion-button[color="danger"] {
+    --background: #ff4d4d;
+    --color: white;
+}
+
+ion-button[color="tertiary"] {
+    --background: #2e2e2e;
+    --color: white;
+}

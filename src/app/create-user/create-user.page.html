@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="content-wrapper">
+    <div class="form-container">
+      <img src="assets/img/finder.png" class="logo-image">
+      <div class="title">Finder™</div>
+
+      <form (ngSubmit)="loginUser()">
+        <div class="input-field">
+          <ion-input
+            [(ngModel)]="gEmail"
+            name="email"
+            type="email"
+            placeholder="Email"
+            required
+          ></ion-input>
+        </div>
+        <div class="input-field">
+          <ion-input
+            [(ngModel)]="gPassword"
+            name="password"
+            type="password"
+            placeholder="Senha"
+            required
+          ></ion-input>
+        </div>
+
+        <ion-button expand="full" type="submit">Entrar</ion-button>
+      </form>
+
+      <div class="login-link">
+        <p>Não tem conta? <a routerLink="/register">Registre-se</a></p>
+      </div>
+    </div>
+  </div>
+</ion-content>

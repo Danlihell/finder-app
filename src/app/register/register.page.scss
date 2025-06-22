@@ -1,0 +1,124 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000, #272727);
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.form-content {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background: #222; /* Fundo do formulário */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  font-size: 1.8rem; /* Ajuste o tamanho da logo se necessário */
+  font-weight: bold;
+  color: white;
+  text-align: center; /* Garante que a logo também esteja centralizada */
+}
+
+.logo-image {
+  width: 150px; /* Aumenta o tamanho da imagem */
+  height: auto;
+  display: block; /* Garante que a imagem seja tratada como um bloco */
+  margin: 0 auto 10px; /* Centraliza a imagem e cria um espaço abaixo dela */
+}
+
+
+ion-list {
+  --background: #222; /* Fundo escuro para a lista */
+  --ion-background-color: #202020; /* Para temas que utilizam essa variável */
+  --color: white; /* Texto branco */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+ion-list ion-item {
+  --background: transparent; /* Remove fundo branco padrão */
+  background: #222; /* Fundo escuro para o campo */
+  border: 1px solid #444; /* Bordas cinzas escuras */
+  border-radius: 5px; /* Bordas arredondadas */
+  margin-bottom: 15px;
+}
+
+ion-list ion-label {
+  color: #ccc; /* Labels em cinza claro */
+}
+
+ion-list ion-input {
+  --background: transparent; /* Remove fundo branco padrão */
+  --color: white; /* Texto branco dentro dos campos */
+  --placeholder-color: #888; /* Placeholder cinza médio */
+  caret-color: #ff007a; /* Cursor rosa */
+  padding: 10px;
+  border: none; /* Remove quaisquer bordas extras */
+}
+
+/* Força o texto branco para todos os casos, incluindo quando o input está inválido */
+ion-input {
+  --color: white !important; /* Texto branco dentro do campo */
+  --placeholder-color: #888 !important; /* Placeholder cinza */
+}
+
+/* Estilo para garantir que o texto seja branco no estado inválido */
+ion-input:invalid {
+  --color: white !important; /* Força o texto a ser branco mesmo no erro */
+  --placeholder-color: #888 !important; /* Placeholder ainda em cinza médio */
+}
+
+/* Para garantir que o estilo funcione no Shadow DOM do Ionic */
+::ng-deep ion-input {
+  --color: white !important;
+  --placeholder-color: #888 !important;
+}
+
+ion-text {
+  font-size: 0.9rem;
+  color: #ff0000; /* Mensagens de erro em vermelho */
+  background-color: #222; /* Fundo escuro */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  display: inline-block; /* Aplica o fundo apenas ao texto */
+  font-color: white
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+ion-button {
+  flex: 1;
+  margin: 0 5px;
+  color: #ff0000; /* Muda o texto para vermelho */
+}
+
+ion-button[fill="outline"] {
+  border-color: #fd0505;
+  color: #ff0000;
+}
+
+ion-button[fill="outline"] {
+  --border-color: #ff0000 !important; /* Muda a cor da borda para vermelho */
+  --color: #ff0000 !important; /* Muda a cor do texto para vermelho */
+  --border-width: 0.2px !important; /* Define a borda como mais fina */
+}
+
+
+
+ion-button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form-content ion-list {
+  margin: 0;
+  padding: 0;
+}

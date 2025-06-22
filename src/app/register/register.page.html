@@ -1,0 +1,103 @@
+<div class="register-container">
+  <form #registerForm="ngForm" (ngSubmit)="createUser()" class="form-content">
+    <img src="assets/img/finder.png" alt="Logo pequena" class="logo-image">
+    <div class="logo">Finder™</div>
+
+    <ion-list>
+      <!-- Campo para Email -->
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+          type="email"
+          [(ngModel)]="gEmail"
+          name="email"
+          required
+          #email="ngModel"
+        ></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="email.invalid && email.touched">
+        O email é obrigatório e deve ser válido.
+      </ion-text>
+
+      <!-- Campo para Usuário -->
+      <ion-item>
+        <ion-label position="floating">Usuário</ion-label>
+        <ion-input
+          type="text"
+          [(ngModel)]="gUsername"
+          name="username"
+          required
+          #username="ngModel"
+          minlength="3"
+        ></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="username.invalid && username.touched">
+        O usuário deve ter pelo menos 3 caracteres.
+      </ion-text>
+
+      <!-- Campo para Endereço -->
+      <ion-item>
+        <ion-label position="floating">Endereço</ion-label>
+        <ion-input
+          type="text"
+          [(ngModel)]="gAddress"
+          name="address"
+          required
+          #address="ngModel"
+        ></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="address.invalid && address.touched">
+        O endereço é obrigatório.
+      </ion-text>
+
+      <!-- Campo para Senha -->
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input
+          type="password"
+          [(ngModel)]="gPassword"
+          name="password"
+          required
+          minlength="6"
+          #password="ngModel"
+        ></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="password.invalid && password.touched">
+        A senha deve ter pelo menos 6 caracteres.
+      </ion-text>
+
+      <!-- Campo para Confirmar Senha -->
+      <ion-item>
+        <ion-label position="floating">Confirmar Senha</ion-label>
+        <ion-input
+          type="password"
+          [(ngModel)]="gConfirmPassword"
+          name="confirmPassword"
+          required
+          #confirmPassword="ngModel"
+        ></ion-input>
+      </ion-item>
+      <ion-text
+        color="danger"
+        *ngIf="gPassword !== gConfirmPassword && confirmPassword.touched"
+      >
+        As senhas não coincidem.
+      </ion-text>
+    </ion-list>
+
+    <!-- Botões -->
+    <div class="button-container">
+      <ion-button
+        type="submit"
+        fill="outline"
+        [disabled]="registerForm.invalid || gPassword !== gConfirmPassword"
+      >
+        Criar Conta
+      </ion-button>
+      <!-- Redirecionando para a página create-user -->
+      <ion-button routerLink="/create-user" type="button" fill="outline">
+        Ir para Login
+      </ion-button>
+    </div>
+  </form>
+</div>

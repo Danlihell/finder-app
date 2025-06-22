@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/search" aria-label="Voltar para a Pesquisa"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Meu Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Seção de Informações do Usuário -->
+  <ion-card class="user-info">
+    <ion-item lines="none">
+      <div class="user-details">
+        <h3>{{ user.name }}</h3>
+        <p>{{ user.email }}</p>
+      </div>
+    </ion-item>
+  </ion-card>
+
+  <!-- Lista de Favoritos -->
+  <ion-list>
+    <ion-list-header>
+      <h2>Favoritos</h2>
+    </ion-list-header>
+    <ion-item *ngFor="let favorite of user.favorites" lines="inset"
+      (click)="goToMediaDetail(favorite.id, favorite.type)">
+      <ion-label>
+        <h3>{{ favorite.title }}</h3>
+      </ion-label>
+      <ion-icon name="star" color="warning" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <!-- Lista de Avaliações -->
+  <ion-list>
+    <ion-list-header>
+      <h2>Minhas Avaliações</h2>
+    </ion-list-header>
+    <ion-item *ngFor="let review of user.reviews" lines="inset" (click)="goToMediaDetail(review.id, review.type)">
+      <ion-label>
+        <h3>{{ review.title }}</h3>
+        <p><strong>Avaliação:</strong>
+          <span *ngIf="review.like">👍 Gostei</span>
+          <span *ngIf="review.dislike">👎 Não gostei</span>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botões de Ações -->
+  <div class="button-container">
+    <ion-button expand="full" color="secondary" (click)="editPreferences()" aria-label="Editar Preferências">
+      Editar Preferências
+    </ion-button>
+    <ion-button expand="full" color="danger" (click)="logout()" aria-label="Sair do Aplicativo">
+      Sair
+    </ion-button>
+    <ion-button expand="full" color="tertiary" routerLink="/change-password" aria-label="Alterar Senha">
+      Alterar Senha
+    </ion-button>
+  </div>
+</ion-content>

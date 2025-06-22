@@ -1,0 +1,137 @@
+// Cores
+$background-color: #1c1c1c; // Fundo escuro
+$primary-color: #b22222; // Vermelho escuro
+$text-color: #ffffff; // Texto branco
+$card-background: #2e2e2e; // Fundo dos cards
+
+// Estilo Global
+ion-content {
+    --background: #2e2e2e; // Cor cinza escuro
+    --color: #ffffff; // Cor branca para o texto (garantindo contraste)
+    color: $text-color; // Aplicando a variável de texto
+    height: 100%; // Garante que o fundo cubra toda a altura da página
+  }
+
+.logo {
+    height: 40px; // Ajuste a altura conforme necessário
+    margin-right: 10px; // Espaçamento à direita
+}
+
+.genre-header {
+    font-size: 20px; // Diminuir o tamanho do texto
+    font-weight: bold; // Tornar o texto mais grosso
+    color: $primary-color; // Cor do texto
+    margin-top: 15px;
+    padding: 5px 15px; // Um pouco de padding para destaque
+}
+
+ion-card {
+    margin: 8px; // Reduzindo o espaçamento entre os cards
+    background-color: $card-background; // Fundo dos cards
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); // Sombra mais intensa
+    border-radius: 10px; // Bordas arredondadas
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centraliza o conteúdo do card
+    text-align: center; // Centraliza o texto do card
+
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+
+    &:hover {
+        transform: scale(1.02); // Aumenta um pouco o tamanho do card
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7); // Aumenta a sombra ao passar o mouse
+        opacity: 0.95; // Reduz um pouco a opacidade ao passar o mouse
+    }
+}
+
+ion-card img {
+    height: 300px; // Ajusta a altura da imagem para um tamanho menor
+    width: auto; // Mantém a proporção da imagem
+    border-top-left-radius: 8px; // Bordas arredondadas para a imagem
+    border-top-right-radius: 8px; // Bordas arredondadas para a imagem
+    margin-bottom: 10px; // Adiciona um espaçamento abaixo da imagem
+}
+
+ion-card-header {
+    background-color: $primary-color; // Fundo do cabeçalho dos cards
+    color: $text-color; // Cor do texto no cabeçalho
+    width: 100%; // Garante que o cabeçalho ocupe toda a largura do card
+    border-top-left-radius: 8px; // Bordas arredondadas para o cabeçalho
+    border-top-right-radius: 8px; // Bordas arredondadas para o cabeçalho
+    padding: 10px 12px; // Ajusta o padding do cabeçalho
+    text-align: center; // Centraliza o texto no cabeçalho
+}
+
+ion-card-title,
+ion-card-subtitle {
+    color: $text-color; // Cor do texto nos títulos
+}
+
+// Estilo do botão "Meu Perfil"
+ion-button {
+    --border: 1px solid $primary-color; // Borda vermelha escura
+    --background: transparent; // Fundo transparente
+    --color: $text-color; // Cor do texto
+    --border-radius: 5px; // Bordas arredondadas
+    margin: 5px; // Ajusta o espaçamento ao redor dos botões
+
+    &:hover {
+        --background: $primary-color; // Fundo vermelho escuro ao passar o mouse
+        --color: #ffffff; // Texto branco ao passar o mouse
+        --border-color: transparent; // Remover a borda ao hover
+    }
+}
+
+ion-searchbar {
+    --background: $card-background; // Cor de fundo da barra de pesquisa
+    --color: $text-color; // Cor do texto
+    margin: 8px 16px; // Ajusta as margens para mais espaçamento lateral
+    border-radius: 8px;
+
+    // Padding e margens internos
+    ion-input {
+        padding: 0 10px; // Padding interno
+    }
+}
+
+// Remover margens excessivas
+ion-list-header {
+    margin-top: 10px;
+}
+
+/* Estilizando o ion-item para ter fundo escuro */
+ion-item {
+    --background: #2e2e2e; /* Fundo cinza escuro */
+    --color: #ffffff; /* Texto branco */
+    --border-color: #2e2e2e; /* Remove borda branca */
+}
+
+ion-toolbar {
+    --background: #2e2e2e; // Fundo cinza escuro
+    --color: #ffffff; // Texto branco
+    --border-color: transparent; // Remove qualquer borda padrão
+  }
+
+  /* Estilizando o seletor de gênero */
+ion-select {
+    --background: #2e2e2e; /* Fundo cinza escuro */
+    --placeholder-color: #aaaaaa; /* Placeholder cinza claro */
+    --color: #ffffff; /* Texto branco */
+  }
+  
+  ion-select::part(icon) {
+    color: #ffffff; // Cor do ícone da seta
+  }
+  
+  ion-select-option {
+    --background: #2e2e2e; /* Fundo das opções no dropdown */
+    --color: #ffffff; /* Texto branco */
+  }
+
+  /* Ajustando o divisor (linha horizontal) */
+ion-divider {
+    --background: #2e2e2e; /* Fundo cinza escuro */
+    --color: #ffffff; /* Cor do divisor */
+    height: 1px; /* Ajuste de altura opcional */
+  }
