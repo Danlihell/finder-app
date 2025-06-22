@@ -54,7 +54,7 @@ Substitua as variáveis com suas credenciais do Firebase.
 ionic serve
 
 
-📁 Estrutura de Pastas (Simplificada)
+## 📁 Estrutura de Pastas (Simplificada)
 src/
 ├── app/
 │   ├── pages/
@@ -65,20 +65,18 @@ src/
 ├── environments/             # Configuração do ambiente
 
 
-🔐 Segurança
+## 🔐 Segurança
 Este projeto não inclui as credenciais reais do Firebase por segurança. Os arquivos environment.ts e environment.prod.ts estão no .gitignore. Use o arquivo de exemplo environment.example.ts para configurar o seu.
 
-📸 Screenshots
+## 📸 Screenshots
 
-![Busca por filmes](src/assets/img/screensshot1.jpg)
-![Detalhes do filme](src/assets/img/screensshot2.jpg)
-![Perfil do usuário](src/assets/img/screensshot3.jpg)
+![Screenshot](src/assets/img/screenshot.jpg)
 
-👨‍💻 Autor
+## 👨‍💻 Autor
 Daniel de Lima Leal
 Desenvolvedor Fullstack | Estudante de ADS (Unisuam)
 📍 Rio de Janeiro - RJ
 LinkedIn | GitHub
 
-📄 Licença
+## 📄 Licença
 Projeto acadêmico sem fins lucrativos. TMDB é uma marca registrada. Este aplicativo utiliza a TMDB API apenas para fins educacionais.
