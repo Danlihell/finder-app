@@ -71,7 +71,7 @@ Este projeto não inclui as credenciais reais do Firebase por segurança. Os arq
 📸 Screenshots
 Substitua essas imagens por prints reais do app em funcionamento
 
-<img src="assets/img/screenshot1.jpg" width="300" alt="Busca por filmes"> <img src="assets/img/screenshot2.jpg" width="300" alt="Detalhes do filme"> <img src="assets/img/screenshot3.png" width="300" alt="Perfil do usuário">
+<img src="assets/img/screensshot1.jpg" width="300" alt="Busca por filmes"> <img src="assets/img/screensshot2.jpg" width="300" alt="Detalhes do filme"> <img src="assets/img/screensshot3.png" width="300" alt="Perfil do usuário">
 
 👨‍💻 Autor
 Daniel de Lima Leal
