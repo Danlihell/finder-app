@@ -2,7 +2,7 @@
 
 Aplicativo desenvolvido em **Ionic + Angular** que permite explorar, avaliar e salvar **filmes e séries** utilizando a API do [TMDB](https://www.themoviedb.org/). Projeto criado para a faculdade com foco em **experiência do usuário**, **funcionalidades completas** e integração com **Firebase**.
 
-![Finder App Screenshot](assets/img/finder.jpg) 
+![Finder App Screenshot](src/assets/img/finder.jpg) 
 
 ---
 
@@ -69,9 +69,10 @@ src/
 Este projeto não inclui as credenciais reais do Firebase por segurança. Os arquivos environment.ts e environment.prod.ts estão no .gitignore. Use o arquivo de exemplo environment.example.ts para configurar o seu.
 
 📸 Screenshots
-Substitua essas imagens por prints reais do app em funcionamento
 
-<img src="assets/img/screensshot1.jpg" width="300" alt="Busca por filmes"> <img src="assets/img/screensshot2.jpg" width="300" alt="Detalhes do filme"> <img src="assets/img/screensshot3.png" width="300" alt="Perfil do usuário">
+![Busca por filmes](src/assets/img/screensshot1.jpg)
+![Detalhes do filme](src/assets/img/screensshot2.jpg)
+![Perfil do usuário](src/assets/img/screensshot3.jpg)
 
 👨‍💻 Autor
 Daniel de Lima Leal
